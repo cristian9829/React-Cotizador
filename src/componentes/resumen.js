@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import  { primeraMayuscula } from '../helper';
 
+
 export default class Resumen extends Component {
 
   mostrarResumen = () =>{

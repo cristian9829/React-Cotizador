@@ -3,6 +3,8 @@ import Header from './Header';
 import Formulario from './Formulario';
 import {obtenerDiferenciaAnio, calcularMarca, obtenerPlan} from '../helper';
 import Resumen from './resumen';
+import Resultado from './resultado';
+
 
 class App extends Component {
 
@@ -64,8 +66,12 @@ class App extends Component {
 
           <Resumen
             datos = {this.state.datos}
-            resultado = {this.state.resultado}
           />
+
+
+        <Resultado
+          resultado = {this.state.resultado}
+        />
         </div>
       </div>
     );
