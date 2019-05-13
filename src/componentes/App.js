@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
 
-function App() {
-  return (
-    <div className="contenedor">
-      <Header
-        titulo = "Cotizador de Seguro de Auto"
-      />
+class App extends Component {
 
-      <div className="contenedor-formulario">
-        <Formulario/>
+  cotizarSeguro = datos =>{ 
+    console.log(datos)
+  }
+
+  render(){
+    return (
+      <div className="contenedor">
+        <Header
+          titulo = "Cotizador de Seguro de Auto"
+        />
+  
+        <div className="contenedor-formulario">
+          <Formulario
+            cotizarSeguro = {this.cotizarSeguro}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
