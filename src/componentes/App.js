@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
-
 import {obtenerDiferenciaAnio, calcularMarca, obtenerPlan} from '../helper';
+import Resumen from './resumen';
 
 class App extends Component {
 
@@ -60,6 +60,11 @@ class App extends Component {
         <div className="contenedor-formulario">
           <Formulario
             cotizarSeguro = {this.cotizarSeguro}
+          />
+
+          <Resumen
+            datos = {this.state.datos}
+            resultado = {this.state.resultado}
           />
         </div>
       </div>
